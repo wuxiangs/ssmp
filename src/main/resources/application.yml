@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: springboot_ssmp
+
+  #数据源配置
+  datasource:
+    druid:
+      username: root
+      password: 123456
+      url: jdbc:mysql://localhost:3306/demo?serverTimezone=UTC
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#mybatis-plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: com/aisino/springboot_ssmp/mapper/xml/*.xml
