@@ -41,8 +41,6 @@ public class BookController {
     @PostMapping()
     @ApiOperation(value = "保存")
     public Result<Boolean> save(@RequestBody Book book) throws Exception {
-        if (book.getName().equals("123"))
-            throw new Exception();
         return Result.success(bookService.save(book));
     }
 
