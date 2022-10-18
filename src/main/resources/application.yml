@@ -16,7 +16,6 @@ spring:
   devtools:
     restart:
       exclude: config/**,static/**
-      enabled: false
 #mybatis-plus配置
 mybatis-plus:
   global-config:

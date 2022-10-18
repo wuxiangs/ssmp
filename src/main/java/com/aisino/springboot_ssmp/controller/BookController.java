@@ -77,9 +77,6 @@ public class BookController {
     @ApiOperation(value = "通过ID获取数据")
     @GetMapping("/{id}")
     public Result<Book> getById(@PathVariable Integer id){
-        System.out.println("test hot deploy");
-        System.out.println("test hot deploy");
-        System.out.println("test hot deploy");
         return Result.success(bookService.getById(id));
     }
 
